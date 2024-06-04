@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
+class Product extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'product_name',
+        'description',
+        'country',
+        'product_code',
+    ];
+
+    /**
+     * Get all of the productCodes for the Product
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function productCodes(): HasMany
+    {
+        return $this->hasMany(ProductCode::class);
+    }
+
+
+    /**
+     * Get all of the orderDetails for the Product
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function orderDetails(): HasMany
+    {
+        return $this->hasMany(OrderDetails::class);
+    }
+}

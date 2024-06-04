@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    max-width: 1440px;
+    padding: 0 2rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+@media (min-width: 768px) {
+
+    .container {
+        max-width: 768px;
+    }
+}
+@media (min-width: 1024px) {
+
+    .container {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1280px) {
+
+    .container {
+        max-width: 1280px;
+    }
+}
+@media (min-width: 1536px) {
+
+    .container {
+        max-width: 1536px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-track {
+    background: #CAE0E8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #929292;
+    background-image: linear-gradient(#fff, #004a65, #fff)
+}
